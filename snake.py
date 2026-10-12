@@ -30,7 +30,7 @@ def init_vars():
     global snake_position, snake_body, food_pos, food_spawn, direction, score
     
     snake_position = [100, 500]
-    snake_body = [[100, 500], [80, 500], [60, 500]]
+    snake_body = [ [80, 500], [60, 500]]
 
     food_pos = [
         random.randrange(0, (frame_size_x // square_size)) * square_size,
@@ -137,10 +137,10 @@ while run:
     )
 
     if (
-        snake_position[0] <= 0
-        or snake_position[0] > frame_size_x
-        or snake_position[1] <= 0
-        or snake_position[1] > frame_size_y
+        snake_position[0] < 0
+        or snake_position[0] >= frame_size_x
+        or snake_position[1] < 0
+        or snake_position[1] >= frame_size_y
     ):
         game_over()
 
