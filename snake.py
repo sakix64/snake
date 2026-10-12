@@ -144,9 +144,7 @@ while run:
     ):
         game_over()
 
-    for block in snake_body[1:]:
-        if snake_position[0] == block[0] and snake_position[1] == block[1]:
-            game_over()
+    1
 
     show_score(1, white, "arial", 20)
     pygame.display.update()
