@@ -43,7 +43,7 @@ def init_vars():
 
 init_vars()
 
-
+print("Hola mundo")
 def show_score(choice, color, font, size):
     score_font = pygame.font.SysFont(font, size)
     score_surface = score_font.render("Score : " + str(score), True, color)
